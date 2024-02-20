@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/detail_page_bg">
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detail_page_bg">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/header_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/detail_img" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-150dp"
+                    android:layout_below="@id/relativeLayout">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/character_image"
+                        android:layout_width="280dp"
+                        android:layout_height="280dp"
+                        android:src="@android:color/transparent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/character_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunit_medium"
+                        android:text="NAme"
+                        android:textColor="@color/character_name"
+                        android:textSize="40sp"
+                        app:layout_constraintEnd_toEndOf="@+id/character_image"
+                        app:layout_constraintStart_toStartOf="@+id/character_image"
+                        app:layout_constraintTop_toBottomOf="@+id/character_image" />
+
+                    <TextView
+                        android:id="@+id/character_species"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunit_medium"
+                        android:text="species"
+                        android:textColor="@color/character_name"
+                        android:textSize="40sp"
+                        app:layout_constraintEnd_toEndOf="@+id/character_name"
+                        app:layout_constraintStart_toStartOf="@+id/character_name"
+                        app:layout_constraintTop_toBottomOf="@+id/character_name" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
