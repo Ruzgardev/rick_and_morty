@@ -40,9 +40,11 @@ class CharactersViewModel(
         val result = apiManager.gelAllCharacters()
         resultCallback?.invoke(result)
 
+        /*
         result.body()?.results?.let { characters ->
             charactersList.addAll(characters)
         }
+         */
     }
 
 
